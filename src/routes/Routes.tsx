@@ -5,6 +5,7 @@ import { Login } from "../features/Login";
 import { Register } from "../features/Register";
 import { Sagas } from "../features/Sagas";
 import { MoreSagas } from "../features/MoreSagas";
+import Test from "../features/Test";
 
 
 export const router = createBrowserRouter([
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         path: '/sagas/more',
         element: <MoreSagas />,
         errorElement: <ErrorPage />
+    },
+    {
+        path: '/test',
+        element: <Test /> 
     }
 
 ])
