@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getSagaById } from '../services/getSagasById';
 import Background from '../components/Background';
+import GeneralOnepiece from "../assets/GeneralImages/One_Piece.png"
 
 export const Test = () => {
   const [title, setTitle] = useState('');
@@ -19,7 +20,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <Background>
+    <Background image={GeneralOnepiece}>
     <div className="text-black4''eew p-8">
       <h1 className="text-3xl font-bold">{title || 'Cargando título...'}</h1>
     </div>

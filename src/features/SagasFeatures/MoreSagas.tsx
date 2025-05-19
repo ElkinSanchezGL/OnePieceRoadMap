@@ -1,14 +1,15 @@
 import React from 'react'
-import Background from '../components/Background'
-import { SagaBox } from '../components/SagaBox'
-import ButtonRedirect from '../components/Button'
-import Marineford from "../assets/Sagas/Saga_Marineford.png"
-import GyojinIsland from "../assets/Sagas/Saga_IslaGyojin..jpg"
-import Dressrosa from "../assets/Sagas/Saga_Dressrosa.png"
-import WholeCake from "../assets/Sagas/Saga_WholeCake.png"
-import Wano from "../assets/Sagas/Saga_Wano.png"
+import Background from '../../components/Background'
+import { SagaBox } from '../../components/SagaBox'
+import ButtonRedirect from '../../components/Button'
+import Marineford from "../../assets/Sagas/PrincipalImages/Saga_Marineford.png"
+import GyojinIsland from "../../assets/Sagas/PrincipalImages/Saga_IslaGyojin..jpg"
+import Dressrosa from "../../assets/Sagas/PrincipalImages/Saga_Dressrosa.png"
+import WholeCake from "../../assets/Sagas/PrincipalImages/Saga_WholeCake.png"
+import Wano from "../../assets/Sagas/PrincipalImages/Saga_Wano.png"
+import GeneralOnepiece from "../../assets/GeneralImages/One_Piece.png"
 import { useEffect, useState } from 'react';
-import { getSagaById } from '../services/getSagasById';
+import { getSagaById } from '../../services/getSagasById';
 
 export const MoreSagas = () => {
       const [titles, setTitles] = useState<{ [key: string]: string }>({});
@@ -36,7 +37,7 @@ export const MoreSagas = () => {
         fetchTitlesIndividually();
       }, []);
     return (
-        <Background>
+        <Background image={GeneralOnepiece}>
             <div>
                 <div className="flex justify-between items-center mb-4">
                     <div></div>
@@ -52,35 +53,35 @@ export const MoreSagas = () => {
                         image={Marineford}
                         description="Esta saga marca el final de la primera parte del anime antes del salto temporal. Si ya las cosas se habían ido poniendo cada vez más difíciles, la tripulación se separa en medio de un conflicto que escala muy rápido."
                         buttonText="Explorar"
-                        route="/sagas/Marineford"
+                        route="/sagas/marineford"
                     />
                     <SagaBox
                         title={titles["7"] || 'Cargando...'}
                         image={GyojinIsland}
                         description="Tras un salto temporal de dos años, la tripulación de Luffy vuelve por fin a reunirse en el Archipiélago Sabaody para continuar su camino hacia el Nuevo Mundo... aunque antes deberán pasar por la isla de los hombres peces."
                         buttonText="Explorar"
-                        route="/sagas/Isla-Gyojin"
+                        route="/sagas/isla-gyojin"
                     />
                     <SagaBox
                         title={titles["8"] || 'Cargando...'}
                         image={Dressrosa}
                         description="Una de las sagas más largas de toda la historia y marca la entrada de lleno de los Piratas de Sombrero de Paja en el Nuevo Mundo. Es una región muy peligrosa donde nos encontramos con algunos de los piratas más feroces del Grand Line."
                         buttonText="Explorar"
-                        route="/sagas/lotr"
+                        route="/sagas/dressrosa"
                     />
                     <SagaBox
                         title={titles["9"] || 'Cargando...'}
                         image={WholeCake}
                         description="Los Sombrero de Paja consiguen reunirse en Zou y empiezan a hacer los planes necesarios para enfrentarse a Kaidou. Sin embargo, Sanji cae en las garras de Big Mom, una peligrosa pirata y una de los Cuatro Emperadores, por lo que la tripulación tendrá que meterse de lleno en su territorio para rescatar al cocinero."
                         buttonText="Explorar"
-                        route="/sagas/Whole-Cake"
+                        route="/sagas/whole-cake"
                     />
                     <SagaBox
                         title={titles["10"] || 'Cargando...'}
                         image={Wano}
                         description="La saga más larga de toda la serie y que arrancó en 2019 para llevarnos a la tierra de los samurais. También conocida como la Saga de los Cuatro Emperadores, con una alianza masiva para derrotar a Kaido y el equilibrio de poderes en el mundo estando más frágil que nunca."
                         buttonText="Explorar"
-                        route="/sagas/Wano"
+                        route="/sagas/wano"
                     />
                 </div>
             </div>
