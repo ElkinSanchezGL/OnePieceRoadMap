@@ -11,6 +11,11 @@ import { Alabasta } from "../features/SagasFeatures/Alabasta";
 import { Skypiea } from "../features/SagasFeatures/Skypiea";
 import { Water7 } from "../features/SagasFeatures/Water7";
 import { ThrillerBark } from "../features/SagasFeatures/ThrillerBark";
+import { MarineFord } from "../features/SagasFeatures/MarineFord";
+import { GyojinIsland } from "../features/SagasFeatures/GyojinIsland";
+import { Dressrosa } from "../features/SagasFeatures/Dressrosa";
+import { Whole_Cake } from "../features/SagasFeatures/Whole_Cake";
+import { Wano } from "../features/SagasFeatures/Wano";
 
 
 export const router = createBrowserRouter([
@@ -18,26 +23,22 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Home />,
         errorElement: <ErrorPage />,
-    },
-        {
+        children: [
+    {
         path: '/register',
         element: <Register />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/login',
         element: <Login />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/sagas',
         element: <Sagas />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/sagas/more',
         element: <MoreSagas />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/test',
@@ -46,27 +47,43 @@ export const router = createBrowserRouter([
     {
         path: '/sagas/east-blue',
         element: <EastBlue />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/sagas/arabasta',
         element: <Alabasta />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/sagas/skypiea',
-        element: <Skypiea />,
-        errorElement:<ErrorPage />
+        element: <Skypiea />
     },
     {
         path: '/sagas/water-seven',
         element: <Water7 />,
-        errorElement: <ErrorPage />
     },
     {
         path: '/sagas/thriller-bark',
         element: <ThrillerBark />,
-        errorElement: <ErrorPage />
+    },
+    {
+        path: '/sagas/marineford',
+        element: <MarineFord />,
+    },
+    {
+        path: '/sagas/isla-gyojin',
+        element: <GyojinIsland />,
+    },
+    {
+        path: '/sagas/dressrosa',
+        element: <Dressrosa />,
+    },
+    {
+        path: '/sagas/whole-cake' ,
+        element: <Whole_Cake />,
+    },
+    {
+        path: '/sagas/wano',
+        element: <Wano />,
     }
-
+        ]
+    },
 ])
