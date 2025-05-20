@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Home />,
         errorElement: <ErrorPage />,
-        children: [
+    },
     {
         path: '/register',
         element: <Register />,
@@ -84,6 +84,4 @@ export const router = createBrowserRouter([
         path: '/sagas/wano',
         element: <Wano />,
     }
-        ]
-    },
 ])
