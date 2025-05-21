@@ -21,7 +21,6 @@ export const Sagas = () => {
       for (const id of ids) {
         try {
           const data = await getSagaById(id);
-          console.log(`Saga ${id}:`, data);
 const title = data?.tittle || data?.title;
 if (title) {
   setTitles(prev => ({ ...prev, [id]: title }));

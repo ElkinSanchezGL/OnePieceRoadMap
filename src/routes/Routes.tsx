@@ -16,6 +16,7 @@ import { GyojinIsland } from "../features/SagasFeatures/GyojinIsland";
 import { Dressrosa } from "../features/SagasFeatures/Dressrosa";
 import { Whole_Cake } from "../features/SagasFeatures/Whole_Cake";
 import { Wano } from "../features/SagasFeatures/Wano";
+import {Map} from "../features/MapFeature";
 
 
 export const router = createBrowserRouter([
@@ -83,5 +84,9 @@ export const router = createBrowserRouter([
     {
         path: '/sagas/wano',
         element: <Wano />,
-    }
+    },
+      {
+    path: '/map-test',
+    element: <Map />,
+  }
 ])

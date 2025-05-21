@@ -38,7 +38,6 @@ export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
           getLocationsBySagaId(sagaId),
         ]);
 
-        console.log("Respuesta cruda de locaciones:", locationsData); // 👈 Para depurar
 
         setSaga(sagaData);
         setArcs(arcsData.slice(0, 5));
@@ -77,7 +76,6 @@ export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
           imageUrl={saga.image}
           bottomImageUrl={saga.banner}
         >
-          {/* Arcos */}
           <div className="bg-white rounded-lg p-4 shadow border">
             <h3 className="font-bold text-lg mb-2">Arcos incluidos</h3>
             <ul className="list-disc list-inside">
