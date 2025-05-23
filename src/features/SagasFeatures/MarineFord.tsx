@@ -1,10 +1,16 @@
 import React from 'react'
 import Background from '../../components/Background'
-import Marine_ford from '../../assets/Sagas/marineford_background2.jpg'
-export const MarineFord = () => {
+import MarinefordBG from '../../assets/Sagas/marineford_background2.jpg'
+import { SagaDetail } from '../../components/SagaDetail'
+export const Marineford = () => {
   return (
-    <Background  image={Marine_ford} >
-        <div></div>
-    </Background>
+  <SagaDetail
+      sagaId={6}
+      backgroundImage={MarinefordBG}
+      arcIds={[30, 31, 32, 34, 35]}
+      characterIds={[1, 290, 289, 82, 673, 518, 520, 690, 247, 291, 293, 429, 661, 663, 70, 54]}
+      episodeIds={[421, 422, 456, 461, 483, 485, 489, 516]}
+      locationIds={[44, 67]}
+    />
   )
 }

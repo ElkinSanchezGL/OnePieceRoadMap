@@ -1,11 +1,13 @@
-import React from 'react'
-import Background from '../../components/Background'
-import Alabasta_ from '../../assets/Sagas/Alabasta_Background.png'
+import AlabastaBG from '../../assets/Sagas/Alabasta_Background.png'
+import { SagaDetail } from '../../components/SagaDetail';
 
 export const Alabasta = () => {
-  return (
-    <Background image={Alabasta_}>
-        <div></div>
-    </Background>
-  )
-}
+  return    <SagaDetail
+      sagaId={2}
+      backgroundImage={AlabastaBG}
+      arcIds={[14, 12, 11, 10,13]} 
+      characterIds={[429, 673, 290, 82, 520]} 
+  episodeIds={[92, 101, 112, 119, 130]}
+      locationIds={[46,47,50]} 
+    />
+};

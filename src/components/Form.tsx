@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ButtonRedirect from '../components/Button';
 
 type FormProps = {
@@ -17,9 +17,6 @@ export const Form: React.FC<FormProps> = ({ isLogin }) => {
       alert('Las contraseñas no coinciden');
       return;
     }
-
-    console.log('Username:', username);
-    console.log('Password:', password);
   };
 
   return (

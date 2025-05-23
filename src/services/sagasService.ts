@@ -26,7 +26,13 @@ export const getEpisodesBySagaId = async (id: number) => {
   return response.data;
 };
 
-export const getLocationsBySagaId = async (id: number) => {
-  const response = await api.get(`/locates/en/${id}`);
-  return response.data;
+export const getLocationById = async (locationId: number) => {
+  try {
+    const response = await api.get(`/locates/en/${locationId}`);
+    return response.data;
+  } catch (error) {
+    
+    console.error(`Error al obtener la ubicación con ID ${locationId}:`, error);
+    return null; 
+  }
 };

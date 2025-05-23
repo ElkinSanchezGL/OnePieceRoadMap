@@ -11,7 +11,7 @@ import { Alabasta } from "../features/SagasFeatures/Alabasta";
 import { Skypiea } from "../features/SagasFeatures/Skypiea";
 import { Water7 } from "../features/SagasFeatures/Water7";
 import { ThrillerBark } from "../features/SagasFeatures/ThrillerBark";
-import { MarineFord } from "../features/SagasFeatures/MarineFord";
+import { Marineford } from "../features/SagasFeatures/MarineFord";
 import { GyojinIsland } from "../features/SagasFeatures/GyojinIsland";
 import { Dressrosa } from "../features/SagasFeatures/Dressrosa";
 import { Whole_Cake } from "../features/SagasFeatures/Whole_Cake";
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/sagas/marineford',
-        element: <MarineFord />,
+        element: <Marineford />,
     },
     {
         path: '/sagas/isla-gyojin',
@@ -86,7 +86,7 @@ export const router = createBrowserRouter([
         element: <Wano />,
     },
       {
-    path: '/map-test',
+    path: '/map',
     element: <Map />,
   }
 ])

@@ -6,20 +6,59 @@ import {
   getArcsBySagaId,
   getCharactersBySagaId,
   getEpisodesBySagaId,
-  getLocationsBySagaId
+  getLocationById 
 } from '../services/sagasService';
+
+type Arc = {
+  id: number;
+  title: string;
+};
+
+type Character = {
+  id: number;
+  name: string;
+};
+
+type Episode = {
+  id: number;
+  episode: number;
+  title: string;
+};
+
+type Location = {
+  id: number;
+  name: string;
+};
+
+type Saga = {
+  id: number;
+  title: string;
+  image: string;
+  banner: string;
+};
 
 type Props = {
   sagaId: number;
   backgroundImage: string;
+  arcIds?: number[];
+  characterIds?: number[];
+  episodeIds?: number[];
+  locationIds?: number[];
 };
 
-export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
-  const [saga, setSaga] = useState<any>(null);
-  const [arcs, setArcs] = useState<any[]>([]);
-  const [characters, setCharacters] = useState<any[]>([]);
-  const [episodes, setEpisodes] = useState<any[]>([]);
-  const [locations, setLocations] = useState<any[]>([]);
+export const SagaDetail = ({
+  sagaId,
+  backgroundImage,
+  arcIds,
+  characterIds,
+  episodeIds,
+  locationIds,
+}: Props) => {
+  const [saga, setSaga] = useState<Saga | null>(null);
+  const [arcs, setArcs] = useState<Arc[]>([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
+  const [episodes, setEpisodes] = useState<Episode[]>([]);
+  const [locations, setLocations] = useState<Location[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,35 +68,50 @@ export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
           arcsData,
           charactersData,
           episodesData,
-          locationsData
         ] = await Promise.all([
           getSagaById(sagaId),
           getArcsBySagaId(sagaId),
           getCharactersBySagaId(sagaId),
           getEpisodesBySagaId(sagaId),
-          getLocationsBySagaId(sagaId),
         ]);
 
-
         setSaga(sagaData);
-        setArcs(arcsData.slice(0, 5));
-        setCharacters(charactersData.slice(0, 5));
-        setEpisodes(episodesData.slice(0, 5));
 
-        const safeLocations = Array.isArray(locationsData?.locations)
-          ? locationsData.locations.slice(0, 5)
-          : Array.isArray(locationsData)
-          ? locationsData.slice(0, 5)
-          : [];
+        setArcs(
+          arcIds ? arcsData.filter((arc: Arc) => arcIds.includes(arc.id)) : arcsData.slice(0, 5)
+        );
+
+        setCharacters(
+          characterIds
+            ? charactersData.filter((char: Character) => characterIds.includes(char.id))
+            : charactersData.slice(0, 5)
+        );
+
+        setEpisodes(
+          episodeIds
+            ? episodesData.filter((ep: Episode) => episodeIds.includes(ep.id))
+            : episodesData.slice(0, 5)
+        );
+
+
+        if (locationIds && locationIds.length > 0) {
+          const locationPromises = locationIds.map(id => getLocationById(id));
+          const fetchedLocations = await Promise.all(locationPromises);
           
-        setLocations(safeLocations);
+          
+          setLocations(fetchedLocations.filter(loc => loc !== null) as Location[]);
+        } else {
+          setLocations([]);
+        }
+    
+
       } catch (error) {
         console.error("Error cargando datos de la saga:", error);
       }
     };
 
     fetchData();
-  }, [sagaId]);
+  }, [sagaId, arcIds, characterIds, episodeIds, locationIds]);
 
   if (!saga) {
     return (
@@ -85,7 +139,6 @@ export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
             </ul>
           </div>
 
-          {/* Personajes */}
           <div className="bg-white rounded-lg p-4 shadow border">
             <h3 className="font-bold text-lg mb-2">Personajes destacados</h3>
             <ul className="list-disc list-inside">
@@ -95,7 +148,6 @@ export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
             </ul>
           </div>
 
-          {/* Episodios */}
           <div className="bg-white rounded-lg p-4 shadow border">
             <h3 className="font-bold text-lg mb-2">Episodios principales</h3>
             <ul className="list-disc list-inside">
@@ -105,13 +157,16 @@ export const SagaDetail = ({ sagaId, backgroundImage }: Props) => {
             </ul>
           </div>
 
-          {/* Locaciones */}
           <div className="bg-white rounded-lg p-4 shadow border">
             <h3 className="font-bold text-lg mb-2">Locaciones destacadas</h3>
             <ul className="list-disc list-inside">
-              {locations.map(loc => (
-                <li key={loc.id}>{loc.name}</li>
-              ))}
+              {locations.length > 0 ? ( 
+                locations.map(loc => (
+                  <li key={loc.id}>{loc.name}</li>
+                ))
+              ) : (
+                <li>No hay locaciones destacadas.</li> 
+              )}
             </ul>
           </div>
         </SagaInfoPanel>

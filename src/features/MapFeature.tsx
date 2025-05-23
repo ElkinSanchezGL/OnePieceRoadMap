@@ -2,21 +2,23 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import image from "../assets/Map/map_one_piece.png";
+import pirateStatic from "../assets/Map/OnepieceGif.png";
+import pirateGif from "../assets/Map/OnepieceGif.gif";
 
 export const Map = () => {
   const navigate = useNavigate();
 
   const locations = [
-    { name: "East Blue", top: "25%", left: "75%", path: "/sagas/east-blue" },
-    { name: "Alabasta", top: "53%", left: "70.5%", path: "/sagas/arabasta" },
-    { name: "Skypiea", top: "58%", left: "77%", path: "/sagas/skypiea" },
-    { name: "Water 7", top: "52.5%", left: "83.5%", path: "/sagas/water-seven" },
-    { name: "Thriller Bark", top: "72%", left: "31.2%", path: "/sagas/thriller-bark" },
-    { name: "Marineford", top: "58.5%", left: "92.6%", path: "/sagas/marineford" },
-    { name: "Isla Gyojin", top: "53.1%", left: "97.3%", path: "/sagas/isla-gyojin" },
-    { name: "Dressrosa", top: "55%", left: "16.6%", path: "/sagas/dressrosa" },
-    { name: "Whole Cake", top: "56.4%", left: "29.2%", path: "/sagas/whole-cake" },
-    { name: "Wano", top: "49%", left: "24%", path: "/sagas/wano" },
+    { name: "East Blue", coords: { x: 0.75, y: 0.25 }, path: "/sagas/east-blue" },
+    { name: "Alabasta", coords: { x: 0.705, y: 0.52 }, path: "/sagas/arabasta" },
+    { name: "Skypiea", coords: { x: 0.77, y: 0.56 }, path: "/sagas/skypiea" },
+    { name: "Water 7", coords: { x: 0.835, y: 0.515 }, path: "/sagas/water-seven" },
+    { name: "Thriller Bark", coords: { x: 0.303, y: 0.72 }, path: "/sagas/thriller-bark" },
+    { name: "Marineford", coords: { x: 0.923, y: 0.55 }, path: "/sagas/marineford" },
+    { name: "Isla Gyojin", coords: { x: 0.967, y: 0.52 }, path: "/sagas/isla-gyojin" },
+    { name: "Dressrosa", coords: { x: 0.16, y: 0.536 }, path: "/sagas/dressrosa" },
+    { name: "Whole Cake", coords: { x: 0.286, y: 0.55 }, path: "/sagas/whole-cake" },
+    { name: "Wano", coords: { x: 0.23, y: 0.48 }, path: "/sagas/wano" },
   ];
 
   return (
@@ -30,12 +32,25 @@ export const Map = () => {
         {locations.map((loc, index) => (
           <div
             key={index}
-            className="absolute w-3.5 h-3.5 bg-red-600 rounded-full cursor-pointer hover:scale-125 transition-transform border-2 border-white"
-            style={{ top: loc.top, left: loc.left }}
+            className="absolute cursor-pointer group"
+            style={{
+              top: `${loc.coords.y * 100}%`,
+              left: `${loc.coords.x * 100}%`,
+            }}
+            onClick={() => navigate(loc.path)}
             data-tooltip-id={`tip-${index}`}
             data-tooltip-content={loc.name}
-            onClick={() => navigate(loc.path)}
           >
+            <img
+              src={pirateStatic}
+              alt={loc.name}
+              className="w-8 h-8 transition-opacity duration-200 group-hover:opacity-0 absolute"
+            />
+            <img
+              src={pirateGif}
+              alt={`${loc.name} Animated`}
+              className="w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            />
             <Tooltip id={`tip-${index}`} place="top" />
           </div>
         ))}
