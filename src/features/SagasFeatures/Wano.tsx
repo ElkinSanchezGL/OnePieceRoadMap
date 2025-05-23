@@ -1,13 +1,18 @@
 
 import Background from '../../components/Background'
-import Wano_ from '../../assets/Sagas/WanoIsland.png'
+import WanoBG from '../../assets/Sagas/WanoIsland.png'
+import { SagaDetail } from '../../components/SagaDetail'
 
 export const Wano = () => {
   return (
-    <Background image={Wano_}>
-        <div></div>
-
-    </Background>
+  <SagaDetail
+      sagaId={10}
+      backgroundImage={WanoBG}
+      arcIds={[46,47]}
+      characterIds= {[1, 187, 560, 562, 590]}
+      episodeIds={[892, 960, 978, 1071, 1076, 1085]}
+      locationIds={[69]}
+    />
   )
 }
 
