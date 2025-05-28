@@ -1,7 +1,5 @@
-import React from 'react'
-import Background from '../../components/Background'
 import MarinefordBG from '../../assets/Sagas/marineford_background2.jpg'
-import { SagaDetail } from '../../components/SagaDetail'
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
 export const Marineford = () => {
   return (
   <SagaDetail

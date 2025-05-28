@@ -1,7 +1,7 @@
 import React from 'react'
 import Background from '../../components/Background'
 import Water7BG from '../../assets/Sagas/Water_7_Background.jpg'
-import { SagaDetail } from '../../components/SagaDetail'
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
 export const Water7 = () => {
   return (
   <SagaDetail

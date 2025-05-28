@@ -1,27 +1,30 @@
-
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 type TextProps = {
   text: string;
-  route: string;
+  route: string; 
   className?: string;
-  onNavigate?: () => void; 
+  onNavigate?: () => void;
 };
 
 const ButtonRedirect: React.FC<TextProps> = ({ text, route, className, onNavigate }) => {
   const navigate = useNavigate();
+  const { lang } = useParams<{ lang: string }>(); // obtiene idioma de la URL
 
   const handleClick = () => {
     if (onNavigate) {
-      onNavigate(); 
+      onNavigate();
     }
-    navigate(route);
+
+    
+    const fullRoute = `/${lang}/${route.replace(/^\/+/, '')}`;
+    navigate(fullRoute);
   };
 
   return (
-    <button 
-      className={className || "bg-red-800 text-white px-8 py-2 rounded hover:bg-red-500 cursor-pointer"} 
+    <button
+      className={className || "bg-red-800 text-white px-8 py-2 rounded hover:bg-red-500 cursor-pointer"}
       onClick={handleClick}
     >
       {text}

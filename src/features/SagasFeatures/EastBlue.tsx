@@ -1,7 +1,6 @@
-import React from 'react'
-import Background from '../../components/Background'
+
 import EastBlueBg from "../../assets/Sagas/East_Blue_Background.png"
-import { SagaDetail } from '../../components/SagaDetail';
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
 
 export const EastBlue = () => {
   return    <SagaDetail

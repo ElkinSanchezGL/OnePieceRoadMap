@@ -1,7 +1,7 @@
 import React from 'react'
 import Background from '../../components/Background'
 import GyojinIslandBG from '../../assets/Sagas/IslandGyojin.png'
-import { SagaDetail } from '../../components/SagaDetail'
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
 
 export const GyojinIsland = () => {
   return (

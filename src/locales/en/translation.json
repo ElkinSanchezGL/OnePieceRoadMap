@@ -1,0 +1,87 @@
+{
+  "home": {
+    "welcomeTitle": "Welcome!!!",
+    "welcomeText": "In this section, you can start a new adventure or resume your progress from a specific saga.",
+    "startAdventure": "Start Adventure",
+    "chooseSaga": "Choose Saga"
+  },
+  "menu": {
+    "home": "Go back home",
+    "chooseSaga": "Choose Saga",
+    "map": "Go back to the map",
+    "optionB": "View subscriptions"
+  },
+  "timeline": {
+    "timelineTitle": "Saga Timeline",
+    "explore": "Explore",
+    "sagas": {
+      "1": {
+        "title": "East Blue Saga",
+        "description": "The saga that starts it all, where we meet Luffy and his dream of becoming Pirate King."
+      },
+      "2": {
+        "title": "Alabasta Saga",
+        "description": "The crew arrives in the desert of Alabasta to fight Crocodile and save the kingdom."
+      },
+      "3": {
+        "title": "Sky Island Saga",
+        "description": "An adventure in the sky, where pirates look for legendary treasures and face Enel."
+      },
+      "4": {
+        "title": "Water 7 Saga",
+        "description": "The crew reaches Water Seven, where decisive events happen for their future."
+      },
+      "5": {
+        "title": "Thriller Bark Saga",
+        "description": "A mysterious island where the crew fights zombies and the powerful Gecko Moria."
+      },
+      "6": {
+        "title": "Summit War Saga",
+        "description": "The biggest war in the One Piece world, deciding the fate of Ace and Luffy."
+      },
+      "7": {
+        "title": "Fish-Man Island Saga",
+        "description": "After a two-year time skip, the crew returns to continue their journey in the New World."
+      },
+      "8": {
+        "title": "Dressrosa Saga",
+        "description": "A long and dangerous saga where the crew faces Doflamingo in the New World."
+      },
+      "9": {
+        "title": "Whole Cake Island Saga",
+        "description": "The crew tries to rescue Sanji from Big Mom's family, one of the Four Emperors."
+      },
+      "10": {
+        "title": "Wano Country Saga",
+        "description": "The Samurai saga and alliance to defeat Kaido – the world's balance is at stake."
+      }
+    }
+  },
+ "plans": {
+  "choosePlan": "Choose your plan",
+  "basic": "Basic",
+  "standard": "Standard",
+  "premium": "Premium",
+  "month": "month",
+  "limitedAccess": "Limited access",
+  "ads": "Ads",
+  "readOnly": "Read only",
+  "fullAccess": "Full access",
+  "noAds": "No ads",
+  "favorites": "Favorites and history",
+  "allIncluded": "All included",
+  "prioritySupport": "Priority support",
+  "earlyAccess": "Early access to new features",
+  "select": "Select plan"
+},
+  "sagaDetail": {
+    "includedArcs": "Included arcs",
+    "featuredCharacters": "Featured characters",
+    "mainEpisodes": "Main episodes",
+    "featuredLocations": "Featured locations",
+    "loading": "Loading saga...",
+    "loadingSection": "Loading..."
+  }
+
+
+}

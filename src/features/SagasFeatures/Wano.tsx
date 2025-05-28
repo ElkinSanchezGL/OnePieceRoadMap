@@ -1,7 +1,7 @@
 
 import Background from '../../components/Background'
 import WanoBG from '../../assets/Sagas/WanoIsland.png'
-import { SagaDetail } from '../../components/SagaDetail'
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
 
 export const Wano = () => {
   return (

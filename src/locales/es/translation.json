@@ -1,0 +1,88 @@
+{
+  "home": {
+    "welcomeTitle": "¡Bienvenido!!!",
+    "welcomeText": "En esta sección, podrás comenzar una nueva aventura o reanudar tu progreso desde una saga específica.",
+    "startAdventure": "Iniciar Aventura",
+    "chooseSaga": "Elegir Saga"
+  },
+  "menu": {
+    "home": "Volver al inicio",
+    "chooseSaga": "Escoger Saga",
+    "map": "Volver al mapa",
+    "optionB": "Ver suscripciones"
+  },
+  "timeline": {
+    "timelineTitle": "Línea de tiempo de las sagas",
+    "explore": "Explorar",
+    "sagas": {
+      "1": {
+        "title": "Saga del East Blue",
+        "description": "La saga donde todo comienza, conocemos a Luffy y su sueño de ser el Rey de los Piratas."
+      },
+      "2": {
+        "title": "Saga de Alabasta",
+        "description": "La tripulación llega al desierto de Alabasta para enfrentarse a Crocodile y salvar el reino."
+      },
+      "3": {
+        "title": "Saga de la Isla del Cielo",
+        "description": "Una aventura en el cielo donde los piratas buscan tesoros legendarios y enfrentan a Enel."
+      },
+      "4": {
+        "title": "Saga de Water 7",
+        "description": "La tripulación llega a Water Seven, donde suceden eventos decisivos para su futuro."
+      },
+      "5": {
+        "title": "Saga de Thriller Bark",
+        "description": "Una isla misteriosa donde luchan contra zombis y el poderoso Gecko Moria."
+      },
+      "6": {
+        "title": "Saga de la Guerra de Marineford",
+        "description": "La guerra más grande del mundo de One Piece, que decide el destino de Ace y Luffy."
+      },
+      "7": {
+        "title": "Saga de la Isla Gyojin",
+        "description": "Después de dos años, la tripulación regresa para continuar su viaje en el Nuevo Mundo."
+      },
+      "8": {
+        "title": "Saga de Dressrosa",
+        "description": "Una saga larga y peligrosa donde se enfrentan a Doflamingo en el Nuevo Mundo."
+      },
+      "9": {
+        "title": "Saga de Whole Cake Island",
+        "description": "Intentan rescatar a Sanji de la familia de Big Mom, una de los Cuatro Emperadores."
+      },
+      "10": {
+        "title": "Saga de Wano",
+        "description": "La saga samurái y la alianza para derrotar a Kaido: el equilibrio del mundo está en juego."
+      }
+    }
+  },
+"plans": {
+  "choosePlan": "Elige tu plan",
+  "basic": "Básico",
+  "standard": "Estándar",
+  "premium": "Premium",
+  "month": "mes",
+  "limitedAccess": "Acceso limitado",
+  "ads": "Publicidad",
+  "readOnly": "Solo lectura",
+  "fullAccess": "Acceso completo",
+  "noAds": "Sin publicidad",
+  "favorites": "Favoritos y historial",
+  "allIncluded": "Todo incluido",
+  "prioritySupport": "Soporte prioritario",
+  "earlyAccess": "Nuevas funciones antes que nadie",
+  "select": "Elegir plan"
+},
+  
+  "sagaDetail": {
+    "includedArcs": "Arcos incluidos",
+    "featuredCharacters": "Personajes destacados",
+    "mainEpisodes": "Episodios principales",
+    "featuredLocations": "Locaciones destacadas",
+    "loading": "Cargando saga...",
+    "loadingSection": "Cargando..."
+  }
+
+
+}

@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import { sagaData } from "../../data/sagaData"; 
-import { SagaTimelineElement } from "../../components/SagaTimelineElement";
-import { useSagaTitles } from "../../hooks/useSagaTitles";
+import { sagaData } from "../../data/sagaData";
+import { SagaTimelineElement } from "../../components/SagasComponents/SagaTimelineElement";
+import Background from "../../components/Background";
+import Sea from "../../assets/GeneralImages/Sea.png";
+
+const LanguageListener: React.FC = () => {
+  const { lang } = useParams<{ lang: string }>();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (lang && i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang, i18n]);
+
+  return null;
+};
 
 export const SagasTimeline = () => {
-  const ids = sagaData.map((s) => s.id);
-  const titles = useSagaTitles(ids);
+  const { t } = useTranslation();
 
   return (
-    <VerticalTimeline>
-      {sagaData.map(({ id, image, description, route }) => (
-        <SagaTimelineElement
-          key={id}
-          title={titles[id.toString()] || "Cargando..."}
-          image={image}
-          description={description}
-          route={route}
-        />
-      ))}
-    </VerticalTimeline>
+    <Background image={Sea}>
+      <LanguageListener />
+      <VerticalTimeline>
+        {sagaData.map(({ id, image, route }) => (
+          <SagaTimelineElement
+            key={id}
+            title={t(`timeline.sagas.${id}.title`, "Cargando...")}
+            image={image}
+            descriptionKey={`timeline.sagas.${id}.description`}
+            route={route}
+          />
+        ))}
+      </VerticalTimeline>
+    </Background>
   );
 };

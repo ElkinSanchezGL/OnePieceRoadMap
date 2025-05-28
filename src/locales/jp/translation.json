@@ -1,0 +1,87 @@
+{
+  "home": {
+    "welcomeTitle": "ようこそ！！！",
+    "welcomeText": "このセクションでは、新しい冒険を始めるか、特定のサガから進行状況を再開できます。",
+    "startAdventure": "冒険を始める",
+    "chooseSaga": "サガを選ぶ"
+  },
+  "menu": {
+    "home": "ホームに戻る",
+    "chooseSaga": "サガを選ぶ",
+    "map": "地図に戻る",
+    "optionB": "購読を見る"
+  },
+  "timeline": {
+    "timelineTitle": "サーガのタイムライン",
+    "explore": "探索する",
+    "sagas": {
+      "1": {
+        "title": "イーストブルー編",
+        "description": "すべての始まり、ルフィと彼の海賊王になる夢を紹介するサーガ。"
+      },
+      "2": {
+        "title": "アラバスタ編",
+        "description": "アラバスタの砂漠に到着し、クロコダイルと戦って王国を救う。"
+      },
+      "3": {
+        "title": "空島編",
+        "description": "空の冒険で、海賊たちは伝説の宝を探し、エネルと対決する。"
+      },
+      "4": {
+        "title": "ウォーターセブン編",
+        "description": "ウォーターセブンに到着し、未来を決める重要な出来事が起こる。"
+      },
+      "5": {
+        "title": "スリラーバーク編",
+        "description": "謎の島で、ゾンビと強力なゲッコー・モリアと戦う。"
+      },
+      "6": {
+        "title": "頂上戦争編",
+        "description": "ワンピース世界最大の戦争で、エースとルフィの運命が決まる。"
+      },
+      "7": {
+        "title": "魚人島編",
+        "description": "2年後、麦わらの一味は新世界で冒険を再開する。"
+      },
+      "8": {
+        "title": "ドレスローザ編",
+        "description": "ドフラミンゴとの戦いが繰り広げられる長くて危険なサーガ。"
+      },
+      "9": {
+        "title": "ホールケーキアイランド編",
+        "description": "サンジをビッグ・マムの家族から救おうとする。"
+      },
+      "10": {
+        "title": "ワノ国編",
+        "description": "カイドウを倒すための侍のサーガと同盟 – 世界の均衡がかかっている。"
+      }
+    }
+  },
+"plans": {
+  "choosePlan": "プランを選ぶ",
+  "basic": "ベーシック",
+  "standard": "スタンダード",
+  "premium": "プレミアム",
+  "month": "月",
+  "limitedAccess": "制限付きアクセス",
+  "ads": "広告あり",
+  "readOnly": "読み取り専用",
+  "fullAccess": "すべての機能にアクセス",
+  "noAds": "広告なし",
+  "favorites": "お気に入りと履歴",
+  "allIncluded": "すべてが含まれます",
+  "prioritySupport": "優先サポート",
+  "earlyAccess": "新機能への先行アクセス",
+  "select": "このプランを選ぶ"
+},
+  "sagaDetail": {
+    "includedArcs": "含まれるアーク",
+    "featuredCharacters": "注目のキャラクター",
+    "mainEpisodes": "注目のエピソード",
+    "featuredLocations": "注目の場所",
+    "loading": "サーガを読み込み中...",
+    "loadingSection": "充電..."
+  }
+
+
+}
