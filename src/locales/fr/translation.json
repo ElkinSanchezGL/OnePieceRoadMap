@@ -1,7 +1,7 @@
 {
   "home": {
-    "welcomeTitle": "Bienvenue!!!",
-    "welcomeText": "Dans cette section, vous pouvez commencer une nouvelle aventure ou reprendre votre progression à partir d'une saga spécifique.",
+    "welcomeTitle": "Bienvenue !!!",
+    "welcomeText": "Ici, vous pouvez commencer une nouvelle aventure ou continuer votre progression depuis une saga spécifique.",
     "startAdventure": "Commencer l'aventure",
     "chooseSaga": "Choisir une saga"
   },
@@ -16,70 +16,87 @@
     "explore": "Explorer",
     "sagas": {
       "1": {
-        "title": "Saga d’East Blue",
-        "description": "La saga où tout commence, on rencontre Luffy et son rêve de devenir le Roi des Pirates."
+        "title": "Saga East Blue",
+        "description": "La saga où tout commence — nous rencontrons Luffy et son rêve de devenir Roi des Pirates."
       },
       "2": {
-        "title": "Saga d’Alabasta",
-        "description": "L’équipage arrive dans le désert d’Alabasta pour affronter Crocodile et sauver le royaume."
+        "title": "Saga Alabasta",
+        "description": "L'équipage arrive dans le désert d'Alabasta pour affronter Crocodile et sauver le royaume."
       },
       "3": {
-        "title": "Saga de Skypiea",
-        "description": "Une aventure dans le ciel à la recherche de trésors légendaires face à Enel."
+        "title": "Saga Île dans le ciel",
+        "description": "Une aventure dans le ciel où les pirates cherchent des trésors légendaires et affrontent Enel."
       },
       "4": {
-        "title": "Saga de Water Seven",
-        "description": "L’équipage atteint Water Seven, où des événements décisifs se produisent."
+        "title": "Saga Water Seven",
+        "description": "L'équipage arrive à Water Seven, où des événements cruciaux pour leur avenir se produisent."
       },
       "5": {
-        "title": "Saga de Thriller Bark",
-        "description": "Une île mystérieuse où l’équipage affronte des zombies et le puissant Gecko Moria."
+        "title": "Saga Thriller Bark",
+        "description": "Une île mystérieuse où l'équipage combat des zombies et Gecko Moria."
       },
       "6": {
-        "title": "Saga de la Guerre au Sommet",
-        "description": "La plus grande guerre dans One Piece, qui détermine le destin d’Ace et de Luffy."
+        "title": "Saga Guerre de Marineford",
+        "description": "La plus grande guerre dans le monde de One Piece, qui décide du destin d'Ace et Luffy."
       },
       "7": {
-        "title": "Saga de l’île des Hommes-Poissons",
-        "description": "Après deux ans, l’équipage revient pour continuer son aventure dans le Nouveau Monde."
+        "title": "Saga Île des Hommes-Poissons",
+        "description": "Après deux ans, l'équipage revient pour poursuivre son voyage dans le Nouveau Monde."
       },
       "8": {
-        "title": "Saga de Dressrosa",
-        "description": "Une longue et dangereuse saga contre Doflamingo dans le Nouveau Monde."
+        "title": "Saga Dressrosa",
+        "description": "Une longue et dangereuse saga où l'équipage affronte Doflamingo."
       },
       "9": {
-        "title": "Saga de Whole Cake Island",
-        "description": "L’équipage tente de sauver Sanji de la famille de Big Mom, l’un des Quatre Empereurs."
+        "title": "Saga Whole Cake Island",
+        "description": "L'équipage tente de sauver Sanji de la famille de Big Mom — l'un des Quatre Empereurs."
       },
       "10": {
-        "title": "Saga de Wano",
-        "description": "La saga des samouraïs et l’alliance pour vaincre Kaido – l’équilibre du monde est en jeu."
+        "title": "Saga Wano Kuni",
+        "description": "La saga des samouraïs et l'alliance contre Kaido — l'équilibre du monde est en jeu."
       }
     }
-},
-"plans": {
-  "choosePlan": "Choisissez votre plan",
-  "basic": "Basique",
-  "standard": "Standard",
-  "premium": "Premium",
-  "month": "mois",
-  "limitedAccess": "Accès limité",
-  "ads": "Publicité",
-  "readOnly": "Lecture seule",
-  "fullAccess": "Accès complet",
-  "noAds": "Sans publicité",
-  "favorites": "Favoris et historique",
-  "allIncluded": "Tout inclus",
-  "prioritySupport": "Support prioritaire",
-  "earlyAccess": "Accès anticipé aux nouvelles fonctionnalités",
-  "select": "Choisir ce plan"
-},
+  },
+  "plans": {
+    "choosePlan": "Choisissez votre plan",
+    "basic": "Basique",
+    "standard": "Standard",
+    "premium": "Premium",
+    "month": "Mois",
+    "limitedAccess": "Accès limité",
+    "ads": "Publicités",
+    "readOnly": "Lecture seule",
+    "fullAccess": "Accès complet",
+    "noAds": "Sans publicités",
+    "favorites": "Favoris et historique",
+    "allIncluded": "Tout inclus",
+    "prioritySupport": "Support prioritaire",
+    "earlyAccess": "Accès anticipé aux nouvelles fonctionnalités",
+    "select": "Sélectionner un plan"
+  },
   "sagaDetail": {
     "includedArcs": "Arcs inclus",
     "featuredCharacters": "Personnages principaux",
     "mainEpisodes": "Épisodes principaux",
-    "featuredLocations": "Lieux importants",
+    "featuredLocations": "Lieux principaux",
     "loading": "Chargement de la saga...",
-    "loadingSection": "Charge..."
+    "loadingSection": "Chargement de la section..."
+  },
+  "login": {
+    "title": "Connexion",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "button": "Se connecter",
+    "invalidCredentials": "Nom d'utilisateur ou mot de passe incorrect",
+    "passwordMismatch": "Les mots de passe ne correspondent pas"
+  },
+  "register": {
+    "title": "Inscription",
+    "repeatPassword": "Répétez le mot de passe",
+    "button": "S'inscrire",
+    "registered": "Inscription réussie"
+  },
+    "map": {
+    "interactive": "Carte interactive"
   }
 }

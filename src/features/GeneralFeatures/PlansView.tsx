@@ -1,69 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { useMemo } from "react";
-import { PricingPlan } from "../../components/PricingPlan";
-
-interface Plan {
-  title: string;
-  price: string;
-  features: string[];
-  highlight?: boolean;
-}
+import { PricingPlan } from "../../components/i18n/PricingPlan";
+import { useCurrency } from "../../hooks/useCurrency";
+import { getPlansData } from "../../utils/getPlanData";
 
 export const PlansView = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
 
-  const currency = useMemo(() => {
-    switch (i18n.language) {
-      case "es":
-        return "COP";
-      case "fr":
-      case "de":
-        return "EUR";
-      case "jp":
-        return "JPY";
-      default:
-        return "USD";
-    }
-  }, [i18n.language]);
-
-  const conversionRates: Record<string, number> = {
-    USD: 1,
-    COP: 4000,
-    EUR: 0.92,
-    JPY: 155,
-  };
-
-  const currencySymbols: Record<string, string> = {
-    USD: "$",
-    COP: "$",
-    EUR: "€",
-    JPY: "¥",
-  };
-
-  const formatPrice = (usdPrice: number) => {
-    const converted = usdPrice * conversionRates[currency];
-    const rounded = currency === "COP" ? Math.round(converted) : converted.toFixed(2);
-    return `${currencySymbols[currency]}${rounded}`;
-  };
-
-  const plans: Plan[] = [
-    {
-      title: t("plans.basic"),
-      price: formatPrice(0),
-      features: [t("plans.limitedAccess"), t("plans.ads"), t("plans.readOnly")],
-    },
-    {
-      title: t("plans.standard"),
-      price: `${formatPrice(4.99)} / ${t("plans.month")}`,
-      features: [t("plans.fullAccess"), t("plans.noAds"), t("plans.favorites")],
-      highlight: true,
-    },
-    {
-      title: t("plans.premium"),
-      price: `${formatPrice(9.99)} / ${t("plans.month")}`,
-      features: [t("plans.allIncluded"), t("plans.prioritySupport"), t("plans.earlyAccess")],
-    },
-  ];
+  const plans = getPlansData(t, formatPrice);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-200 to-blue-500 p-10">

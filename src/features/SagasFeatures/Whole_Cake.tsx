@@ -1,7 +1,7 @@
 import React from 'react'
-import Background from '../../components/Background'
+import Background from '../../components/GeneralComponents/Background'
 import WholeCakeBG from '../../assets/Sagas/whole_Cake.png'
-import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail/SagaDetail';
 export const Whole_Cake = () => {
   return (
   <SagaDetail

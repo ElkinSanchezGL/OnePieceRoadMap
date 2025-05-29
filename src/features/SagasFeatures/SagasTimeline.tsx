@@ -6,7 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { sagaData } from "../../data/sagaData";
 import { SagaTimelineElement } from "../../components/SagasComponents/SagaTimelineElement";
-import Background from "../../components/Background";
+import Background from "../../components/GeneralComponents/Background";
 import Sea from "../../assets/GeneralImages/Sea.png";
 
 const LanguageListener: React.FC = () => {

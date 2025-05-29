@@ -1,8 +1,7 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Background from '../../components/Background';
-import ButtonRedirect from '../../components/Button';
-import { ScrollFeature } from '../../components/ScrollFeature';
+import Background from '../../components/GeneralComponents/Background';
+import ButtonRedirect from '../../components/GeneralComponents/Button';
+import { ScrollFeature } from '../../components/GeneralComponents/ScrollFeature';
 import OnePiece from '../../assets/GeneralImages/OnePieceRoadMap.png';
 import Mugis from '../../assets/GeneralImages/Mugis.png';
 import GeneralOnepiece from "../../assets/GeneralImages/One_Piece.png";

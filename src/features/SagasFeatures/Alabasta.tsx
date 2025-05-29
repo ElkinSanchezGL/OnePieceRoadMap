@@ -1,5 +1,5 @@
 import AlabastaBG from '../../assets/Sagas/Alabasta_Background.png'
-import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail/SagaDetail';
 
 export const Alabasta = () => {
   return    <SagaDetail

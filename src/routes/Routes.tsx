@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Home from '../features/GeneralFeatures/Home';
-import ErrorPage from "../components/ErrorPage";
+import ErrorPage from "../components/GeneralComponents/ErrorPage";
 import { Login } from "../features/GeneralFeatures/Login";
 import { Register } from "../features/GeneralFeatures/Register";
 import { EastBlue } from "../features/SagasFeatures/EastBlue";
@@ -13,7 +13,7 @@ import { GyojinIsland } from "../features/SagasFeatures/GyojinIsland";
 import { Dressrosa } from "../features/SagasFeatures/Dressrosa";
 import { Whole_Cake } from "../features/SagasFeatures/Whole_Cake";
 import { Wano } from "../features/SagasFeatures/Wano";
-import { Map } from "../features/MapFeature";
+import { Map } from "../features/Map";
 import MainLayout from "../layouts/MainLayout";
 import { SagasTimeline } from "../features/SagasFeatures/SagasTimeline";
 import { PlansView } from "../features/GeneralFeatures/PlansView";
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       { path: 'sagas/dressrosa', element: <Dressrosa /> },
       { path: 'sagas/whole-cake', element: <Whole_Cake /> },
       { path: 'sagas/wano', element: <Wano /> },
-      { path: 'map', element: <Map /> },
+      { path: 'map', element: <Map/> },
     ],
   },
 ]);

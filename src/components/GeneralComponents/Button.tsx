@@ -10,7 +10,7 @@ type TextProps = {
 
 const ButtonRedirect: React.FC<TextProps> = ({ text, route, className, onNavigate }) => {
   const navigate = useNavigate();
-  const { lang } = useParams<{ lang: string }>(); // obtiene idioma de la URL
+  const { lang } = useParams<{ lang: string }>();
 
   const handleClick = () => {
     if (onNavigate) {

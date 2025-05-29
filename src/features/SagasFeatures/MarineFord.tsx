@@ -1,5 +1,5 @@
 import MarinefordBG from '../../assets/Sagas/marineford_background2.jpg'
-import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail/SagaDetail';
 export const Marineford = () => {
   return (
   <SagaDetail

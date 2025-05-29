@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonRedirect from '../components/Button'; 
+import ButtonRedirect from '../GeneralComponents/Button'; 
 
 type SagaBoxProps = {
   title?: string;

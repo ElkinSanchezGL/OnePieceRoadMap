@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { BurguerDespegable } from '../components/BurguerDespegable';
-import LanguageSwitcher from '../components/LanguageSwitcher';
+import { BurguerDespegable } from '../components/GeneralComponents/BurguerDespegable';
+import LanguageSwitcher from '../components/i18n/LanguageSwitcher';
 
 const MainLayout: React.FC = () => {
   const { lang } = useParams<{ lang: string }>();

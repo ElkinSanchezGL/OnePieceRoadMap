@@ -1,87 +1,102 @@
 {
   "home": {
     "welcomeTitle": "ようこそ！！！",
-    "welcomeText": "このセクションでは、新しい冒険を始めるか、特定のサガから進行状況を再開できます。",
+    "welcomeText": "ここでは新しい冒険を始めたり、特定のサガから進行状況を続けたりできます。",
     "startAdventure": "冒険を始める",
     "chooseSaga": "サガを選ぶ"
   },
   "menu": {
     "home": "ホームに戻る",
     "chooseSaga": "サガを選ぶ",
-    "map": "地図に戻る",
-    "optionB": "購読を見る"
+    "map": "マップに戻る",
+    "optionB": "サブスクリプションを見る"
   },
   "timeline": {
-    "timelineTitle": "サーガのタイムライン",
-    "explore": "探索する",
+    "timelineTitle": "サガのタイムライン",
+    "explore": "探検",
     "sagas": {
       "1": {
-        "title": "イーストブルー編",
-        "description": "すべての始まり、ルフィと彼の海賊王になる夢を紹介するサーガ。"
+        "title": "イーストブルーサガ",
+        "description": "すべての始まりのサガ—ルフィと彼の海賊王になる夢に出会います。"
       },
       "2": {
-        "title": "アラバスタ編",
-        "description": "アラバスタの砂漠に到着し、クロコダイルと戦って王国を救う。"
+        "title": "アラバスタサガ",
+        "description": "クルーはアラバスタの砂漠に到着し、クロコダイルと戦い王国を救います。"
       },
       "3": {
-        "title": "空島編",
-        "description": "空の冒険で、海賊たちは伝説の宝を探し、エネルと対決する。"
+        "title": "スカイアイランドサガ",
+        "description": "空の冒険。海賊たちは伝説の宝を探し、エネルに立ち向かいます。"
       },
       "4": {
-        "title": "ウォーターセブン編",
-        "description": "ウォーターセブンに到着し、未来を決める重要な出来事が起こる。"
+        "title": "ウォーターセブンサガ",
+        "description": "クルーはウォーターセブンに到着し、未来のために重要な出来事が起こります。"
       },
       "5": {
-        "title": "スリラーバーク編",
-        "description": "謎の島で、ゾンビと強力なゲッコー・モリアと戦う。"
+        "title": "スリラーバークサガ",
+        "description": "クルーがゾンビとゲッコーモリアと戦う神秘的な島。"
       },
       "6": {
-        "title": "頂上戦争編",
-        "description": "ワンピース世界最大の戦争で、エースとルフィの運命が決まる。"
+        "title": "マリンフォード戦争サガ",
+        "description": "ワンピースの世界最大の戦争で、エースとルフィの運命を決めます。"
       },
       "7": {
-        "title": "魚人島編",
-        "description": "2年後、麦わらの一味は新世界で冒険を再開する。"
+        "title": "魚人島サガ",
+        "description": "2年後、クルーは新世界での旅を続けるために戻ってきます。"
       },
       "8": {
-        "title": "ドレスローザ編",
-        "description": "ドフラミンゴとの戦いが繰り広げられる長くて危険なサーガ。"
+        "title": "ドレスローザサガ",
+        "description": "クルーがドフラミンゴに立ち向かう長く危険なサガ。"
       },
       "9": {
-        "title": "ホールケーキアイランド編",
-        "description": "サンジをビッグ・マムの家族から救おうとする。"
+        "title": "ホールケーキアイランドサガ",
+        "description": "クルーは四皇の一人、ビッグマムの家族からサンジを救おうとします。"
       },
       "10": {
-        "title": "ワノ国編",
-        "description": "カイドウを倒すための侍のサーガと同盟 – 世界の均衡がかかっている。"
+        "title": "ワノ国サガ",
+        "description": "侍のサガとカイドウに対する同盟—世界の均衡がかかっています。"
       }
     }
   },
-"plans": {
-  "choosePlan": "プランを選ぶ",
-  "basic": "ベーシック",
-  "standard": "スタンダード",
-  "premium": "プレミアム",
-  "month": "月",
-  "limitedAccess": "制限付きアクセス",
-  "ads": "広告あり",
-  "readOnly": "読み取り専用",
-  "fullAccess": "すべての機能にアクセス",
-  "noAds": "広告なし",
-  "favorites": "お気に入りと履歴",
-  "allIncluded": "すべてが含まれます",
-  "prioritySupport": "優先サポート",
-  "earlyAccess": "新機能への先行アクセス",
-  "select": "このプランを選ぶ"
-},
+  "plans": {
+    "choosePlan": "プランを選ぶ",
+    "basic": "ベーシック",
+    "standard": "スタンダード",
+    "premium": "プレミアム",
+    "month": "月",
+    "limitedAccess": "制限付きアクセス",
+    "ads": "広告あり",
+    "readOnly": "読み取り専用",
+    "fullAccess": "フルアクセス",
+    "noAds": "広告なし",
+    "favorites": "お気に入りと履歴",
+    "allIncluded": "すべて込み",
+    "prioritySupport": "優先サポート",
+    "earlyAccess": "新機能の早期アクセス",
+    "select": "プランを選択"
+  },
   "sagaDetail": {
     "includedArcs": "含まれるアーク",
-    "featuredCharacters": "注目のキャラクター",
-    "mainEpisodes": "注目のエピソード",
+    "featuredCharacters": "主要キャラクター",
+    "mainEpisodes": "注目エピソード",
     "featuredLocations": "注目の場所",
-    "loading": "サーガを読み込み中...",
-    "loadingSection": "充電..."
+    "loading": "サガを読み込み中...",
+    "loadingSection": "セクションを読み込み中..."
+  },
+  "login": {
+    "title": "ログイン",
+    "username": "ユーザー名",
+    "password": "パスワード",
+    "button": "ログイン",
+    "invalidCredentials": "ユーザー名またはパスワードが正しくありません",
+    "passwordMismatch": "パスワードが一致しません"
+  },
+  "register": {
+    "title": "登録",
+    "repeatPassword": "パスワードを再入力",
+    "button": "登録",
+    "registered": "登録が完了しました"
+  },
+    "map": {
+    "interactive": "インタラクティブマップ"
   }
-
-
 }

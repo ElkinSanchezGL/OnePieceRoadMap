@@ -1,7 +1,7 @@
 import React from 'react'
-import Background from '../../components/Background'
+import Background from '../../components/GeneralComponents/Background'
 import DressrosaBG from '../../assets/Sagas/Dressrosa_Background.png'
-import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail/SagaDetail';
 export const Dressrosa = () => {
   return (
   <SagaDetail

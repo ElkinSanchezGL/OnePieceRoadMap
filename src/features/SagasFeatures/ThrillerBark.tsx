@@ -1,7 +1,7 @@
 import React from 'react'
 import ThrillerBarkBG from '../../assets/Sagas/thriller-bark_Background.jpg'
-import Background from '../../components/Background'
-import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
+import Background from '../../components/GeneralComponents/Background'
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail/SagaDetail';
 
 export const ThrillerBark = () => {
   return (

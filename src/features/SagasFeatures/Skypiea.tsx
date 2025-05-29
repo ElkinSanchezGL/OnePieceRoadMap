@@ -1,7 +1,7 @@
 import React from 'react'
-import Background from '../../components/Background'
+import Background from '../../components/GeneralComponents/Background'
 import SkypeiaBG from '../../assets/Sagas/Skypiea_background.jpg'
-import { SagaDetail } from '../../components/SagasComponents/SagaDetail';
+import { SagaDetail } from '../../components/SagasComponents/SagaDetail/SagaDetail';
 export const Skypiea = () => {
   return  <SagaDetail
       sagaId={3}
