@@ -19,8 +19,24 @@ export const ArcsSection = ({ arcs, loading }: { arcs: Arc[]; loading: boolean }
   );
 };
 
-export const CharactersSection = ({ characters }: { characters: Character[] }) => {
+export const CharactersSection = ({
+  characters,
+  loading,
+}: {
+  characters: Character[];
+  loading: boolean;
+}) => {
   const { t } = useTranslation();
+
+  if (loading) {
+    return (
+      <div className="bg-white rounded-lg p-4 shadow border mb-4">
+        <h3 className="font-bold text-lg mb-2">{t("sagaDetail.featuredCharacters")}</h3>
+        <p>{t("sagaDetail.loadingSection")}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white rounded-lg p-4 shadow border mb-4">
       <h3 className="font-bold text-lg mb-2">{t("sagaDetail.featuredCharacters")}</h3>
@@ -32,6 +48,7 @@ export const CharactersSection = ({ characters }: { characters: Character[] }) =
     </div>
   );
 };
+
 
 export const EpisodesSection = ({
   episodes,

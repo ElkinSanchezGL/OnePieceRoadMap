@@ -27,14 +27,16 @@ export async function fetchEpisodes(
   episodeIds: number[] | undefined,
   getEpisodesBySagaId: (id: number, lang: string) => Promise<Episode[]>
 ): Promise<Episode[]> {
-  if (supportedLangs.includes(lang)) {
-    const episodesData = await getEpisodesBySagaId(sagaId, lang);
+  const normalizedLang = lang === "ja" ? "jp" : lang;
+
+  if (supportedLangs.includes(normalizedLang)) {
+    const episodesData = await getEpisodesBySagaId(sagaId, normalizedLang);
     return episodeIds
       ? episodesData.filter((ep) => episodeIds.includes(ep.id))
       : episodesData.slice(0, 5);
   } else {
     const sagaSlug = slugMap[sagaTitle] || normalizeSlug(sagaTitle);
-    const episodesArray = episodeSources[lang]?.[sagaSlug] || [];
+    const episodesArray = episodeSources[normalizedLang]?.[sagaSlug] || [];
 
     const episodeMapByNumber = episodesArray.reduce(
       (acc: Record<number, Episode>, ep) => {

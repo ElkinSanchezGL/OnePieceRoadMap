@@ -7,7 +7,7 @@ export const normalizeSlug = (str: string) =>
 
 export const slugMap: Record<string, string> = {
   "Water Seven / CP9": "water-seven",
-  "East Blue": "east-blue",
+  "East Blue": "eastblue",
   Alabasta: "alabasta",
   "Celestial Island": "skypiea",
   "Water 7": "water-seven",
