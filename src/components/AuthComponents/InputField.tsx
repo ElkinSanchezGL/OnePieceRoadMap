@@ -5,6 +5,7 @@ const InputField = ({
   value,
   onChange,
   required = true,
+  className = "",
 }: {
   id: string;
   label: string;
@@ -12,8 +13,9 @@ const InputField = ({
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
+  className?: string;
 }) => (
-  <div className="mb-6">
+  <div className={'mb-6 ${className}' }>
     <label
       htmlFor={id}
       className="block text-gray-800 font-semibold mb-2 select-none"
