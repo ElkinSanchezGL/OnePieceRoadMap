@@ -9,9 +9,26 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return localStorage.getItem("isAuthenticated") === "true";
-  });
+
+  const getInitialAuthState = () => {
+    const stored = localStorage.getItem("isAuthenticated");
+    const expiration = localStorage.getItem("sessionExpiration");
+
+    if (stored === "true" && expiration) {
+      const now = Date.now();
+      if (now < parseInt(expiration)) {
+        return true;
+      } else {
+
+        localStorage.removeItem("isAuthenticated");
+        localStorage.removeItem("sessionExpiration");
+        return false;
+      }
+    }
+    return false;
+  };
+
+  const [isAuthenticated, setIsAuthenticated] = useState(getInitialAuthState);
 
   useEffect(() => {
     localStorage.setItem("isAuthenticated", String(isAuthenticated));
@@ -20,14 +37,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = (username: string, password: string) => {
     if (username === "luffy" && password === "1234") {
       setIsAuthenticated(true);
+      const expiration = Date.now() + 60 * 60 * 1000; 
+      localStorage.setItem("sessionExpiration", expiration.toString());
       return true;
     }
     return false;
   };
 
-
   const logout = () => {
     setIsAuthenticated(false);
+    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("sessionExpiration");
   };
 
   return (

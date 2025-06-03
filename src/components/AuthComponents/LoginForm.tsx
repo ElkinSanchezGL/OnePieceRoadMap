@@ -31,7 +31,7 @@ const LoginForm = () => {
         <InputField id="password" label={t("login.password")} type="password" value={formData.password} onChange={handleChange} />
       </div>
 
-      <button type="submit" className="bg-red-700 text-white px-6 py-3 rounded-lg mt-6 w-full">
+      <button type="submit" className="bg-red-700 cursor-pointer text-white px-6 py-3 rounded-lg mt-6 w-full">
         {t("login.button")}
       </button>
     </form>
