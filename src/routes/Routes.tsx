@@ -18,6 +18,7 @@ import MainLayout from "../layouts/MainLayout";
 import { SagasTimeline } from "../features/SagasFeatures/SagasTimeline";
 import { PlansView } from "../features/GeneralFeatures/PlansView";
 import PrivateRoute from "./PrivateRoute";
+import AuthLayout from "../layouts/AuthLayout";
 
 export const router = createBrowserRouter([
   {
@@ -51,11 +52,12 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: '/login',
-    element: <Login />,
+    path: '/',
+    element: <AuthLayout />,
+    children: [
+    {path: 'register', element: <Register />,},
+    {path: 'login', element: <Login />}
+    ]
   },
-  {
-    path: '/register',
-    element: <Register />,
-  },
+
 ]);
